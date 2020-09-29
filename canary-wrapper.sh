@@ -1,5 +1,5 @@
 !#/bin/bash
-filepath=$2
+filepath="$( cd "$( dirname "$0" )" && pwd )/canary.rb"
 sensor_id=$1
 output=$(ruby $filepath $sensor_id)
 if [ -n "$output" ]
